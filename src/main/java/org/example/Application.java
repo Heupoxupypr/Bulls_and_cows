@@ -18,8 +18,13 @@ public class Application {
             default -> System.out.println("такой игры еще не существует");
         }
         assert game != null;
-        game.start(4, 2);
+        System.out.println("Введите длину загадываемого слова");
+        int size = in.nextInt();
+        System.out.println("Введите колличество попыток для угадывания");
+        int tries = in.nextInt();
+        game.start(size, tries);
         while (game.getGameStatus().equals(GameStatus.START)) {
+            System.out.println("Попытка № " + (AbstractGame.countTry + 1) + "; Всего попыток: " + tries + ".");
             System.out.println("ваш ход");
             String answer = in.next();
             Answer answerGame = game.inputAnswer(answer);
