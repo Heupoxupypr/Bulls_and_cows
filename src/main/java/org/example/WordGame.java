@@ -10,6 +10,7 @@ public class WordGame extends AbstractGame {
         for (int i = 61; i < 123; i++) {
             charList.add(String.valueOf(i));
         }
+        System.out.println("Generated charList: " + charList);
         return charList;
     }
 }

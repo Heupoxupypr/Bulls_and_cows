@@ -28,6 +28,7 @@ public abstract class AbstractGame implements Game {
             res += charList.get(randomeIndex);
             charList.remove(randomeIndex);
         }
+        System.out.println("Generated word: " + res);
         return res;
     }
 
