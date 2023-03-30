@@ -20,7 +20,7 @@ public class Application {
         assert game != null;
         System.out.println("Введите длину загадываемого слова");
         int size = in.nextInt();
-        System.out.println("Введите колличество попыток для угадывания");
+        System.out.println("Введите количество попыток для угадывания");
         int tries = in.nextInt();
         game.start(size, tries);
         while (game.getGameStatus().equals(GameStatus.START)) {
