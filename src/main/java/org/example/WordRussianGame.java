@@ -7,15 +7,10 @@ public class WordRussianGame extends AbstractGame {
     @Override
     List<String> generateCharList() {
         List<String> charList = new ArrayList<>();
-        for (int i = 160; i < 242; i++) {
+        for (int i = 1072; i <= 1103; i++) {
             charList.add(String.valueOf((char) i));
-            if (i == 175) {
-                i += 49;
-            } else if (i == 239) {
-                i += 2;
-            }
         }
-        System.out.println("Generated charList: " + String.valueOf(charList));
+        System.out.println("Generated charList: " + charList);
         return charList;
     }
 }
