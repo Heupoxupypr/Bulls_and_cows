@@ -11,16 +11,15 @@ public class Application {
         System.out.println("Выберите игру");
         int num=in.nextInt();
         Game game = null;
-        switch (num){
-            case 1:game=new NumberGame();
-                break;
-            case 2:game=new WordGame();
-                break;
+        switch (num) {
+            case 1 -> game = new NumberGame();
+            case 2 -> game = new WordGame();
+
 //            case 3:game=new WordRussianGame();
 //                break;
-            default:
-                System.out.println("такой игры еще не существует");
+            default -> System.out.println("такой игры еще не существует");
         }
+        assert game != null;
         game.start(4,2);
         while(game.getGameStatus().equals(GameStatus.START)){
             System.out.println("ваш ход");
